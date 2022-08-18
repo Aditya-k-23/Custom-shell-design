@@ -1,0 +1,11 @@
+#!/bin/sh
+case "$1" in
+    -*)
+        kill "$1" $$
+        ;;
+    [0-9]*)
+        exit "$1"
+        ;;
+    *)
+        exit 0
+esac
